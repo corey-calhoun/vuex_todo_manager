@@ -1,6 +1,15 @@
 <template>
   <div>
       <h3>Todos</h3>
+      <div class="legend">
+        <span>Double click to mark as complete</span>
+        <span>
+          <span class='incomplete-box'> = Incomplete</span>
+        </span>
+        <span>
+          <span class='complete-box'> = Complete</span>
+        </span>
+      </div>
       <div class="todos">
         <div v-for="todo in allTodos" :key="todo.id" class="todo">
         {{todo.title}}
@@ -52,5 +61,16 @@ export default {
 
   i:hover {
     color: red;
+  }
+
+  .incomplete-box {
+    display: inline-block;
+    width: 10px;
+    height: 10px;
+    background: #41b883;
+  }
+
+  .complete-box {
+
   }
 </style>
